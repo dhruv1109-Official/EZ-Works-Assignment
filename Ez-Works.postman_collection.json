@@ -1,0 +1,111 @@
+{
+	"info": {
+		"_postman_id": "ee519a50-48e2-4d40-a4c4-6934474a5ee1",
+		"name": "Ez-Works",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "39775843",
+		"_collection_link": "https://dhruv1109official.postman.co/workspace/Team-Workspace~93d9cd05-9c19-4a87-87b1-ca391a948f43/collection/39775843-ee519a50-48e2-4d40-a4c4-6934474a5ee1?action=share&source=collection_link&creator=39775843"
+	},
+	"item": [
+		{
+			"name": "Signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "// {\r\n//     \"name\":\"Dhruv\",\r\n//     \"email\":\"dhruvkulshrestha11@gmail.com\",\r\n//     \"password\":\"dhruv11\",\r\n//     \"role\":\"client\"\r\n// }\r\n\r\n{\r\n    \"name\":\"DhruvTest\",\r\n    \"email\":\"dhruvkulshrestha11official@gmail.com\",\r\n    \"password\":\"dhruv11\",\r\n    \"role\":\"ops\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/client/signup"
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"dhruvkulshrestha11@gmail.com\",\r\n    \"password\":\"dhruv11\"\r\n}"
+				},
+				"url": "http://localhost:3000/client/login"
+			},
+			"response": []
+		},
+		{
+			"name": "UploadFile",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/D:/GITHUB/EZ-Works-Assignment/testUploadFiles/test.pptx"
+						}
+					]
+				},
+				"url": "http://localhost:3000/ops/uploadFile"
+			},
+			"response": []
+		},
+		{
+			"name": "List All Files",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get Encrypted Download Link",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3000/client/downloadLink/sQbsqnCivJK3LNP9c9tuJD"
+			},
+			"response": []
+		},
+		{
+			"name": "FIle Download By Client",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRocnV2a3Vsc2hyZXN0aGExMUBnbWFpbC5jb20iLCJwYXNzd29yZCI6ImRocnV2MTEiLCJyb2xlIjoiY2xpZW50IiwiaWF0IjoxNzMxODgxOTY3fQ.HxU216BNh6LM3FWGWdeUxi74plMidwNIBGXqLxU5KOA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/client/decrypt?url=http%3A%2F%2Flocalhost%3A3000%2Fclient%2Fdownload%2FsQbsqnCivJK3LNP9c9tuJD",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"client",
+						"decrypt"
+					],
+					"query": [
+						{
+							"key": "url",
+							"value": "http%3A%2F%2Flocalhost%3A3000%2Fclient%2Fdownload%2FsQbsqnCivJK3LNP9c9tuJD"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
